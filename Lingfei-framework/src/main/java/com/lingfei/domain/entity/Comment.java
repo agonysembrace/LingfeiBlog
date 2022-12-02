@@ -3,49 +3,38 @@ package com.lingfei.domain.entity;
 import java.util.Date;
 
 import java.io.Serializable;
-
-import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 /**
- * 文章表(Article)表实体类
+ * 评论表(Comment)表实体类
  *
  * @author makejava
- * @since 2022-12-02 12:41:54
+ * @since 2022-12-02 12:42:02
  */
 @SuppressWarnings("serial")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("sg_article")
-public class Article  {
+@TableName("sg_comment")
+public class Comment  {
     @TableId
     private Long id;
 
-    @TableField(exist = false)
-    private String categoryName;
-
-    //标题
-    private String title;
-    //文章内容
+    //评论类型（0代表文章评论，1代表友链评论）
+    private String type;
+    //文章id
+    private Long articleId;
+    //根评论id
+    private Long rootId;
+    //评论内容
     private String content;
-    //文章摘要
-    private String summary;
-    //所属分类id
-    private Long categoryId;
-    //缩略图
-    private String thumbnail;
-    //是否置顶（0否，1是）
-    private String isTop;
-    //状态（0已发布，1草稿）
-    private String status;
-    //访问量
-    private Long viewCount;
-    //是否允许评论 1是，0否
-    private String isComment;
+    //所回复的目标评论的userid
+    private Long toCommentUserId;
+    //回复目标评论id
+    private Long toCommentId;
     
     private Long createBy;
     

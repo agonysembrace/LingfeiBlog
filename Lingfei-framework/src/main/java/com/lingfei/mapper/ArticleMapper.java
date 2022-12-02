@@ -5,10 +5,12 @@ import com.lingfei.domain.entity.Article;
 
 
 /**
- * @author lingfei Wang
- * @version 1.0
- * @date 2022/12/1 16:41
- * @Decription:
+ * 文章表(Article)表数据库访问层
+ *
+ * @author makejava
+ * @since 2022-12-02 12:41:53
  */
 public interface ArticleMapper extends BaseMapper<Article> {
+
 }
+

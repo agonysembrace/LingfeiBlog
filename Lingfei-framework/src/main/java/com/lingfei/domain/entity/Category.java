@@ -3,49 +3,34 @@ package com.lingfei.domain.entity;
 import java.util.Date;
 
 import java.io.Serializable;
-
-import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 /**
- * 文章表(Article)表实体类
+ * 分类表(Category)表实体类
  *
  * @author makejava
- * @since 2022-12-02 12:41:54
+ * @since 2022-12-02 12:42:02
  */
 @SuppressWarnings("serial")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("sg_article")
-public class Article  {
+@TableName("sg_category")
+public class Category  {
     @TableId
     private Long id;
 
-    @TableField(exist = false)
-    private String categoryName;
-
-    //标题
-    private String title;
-    //文章内容
-    private String content;
-    //文章摘要
-    private String summary;
-    //所属分类id
-    private Long categoryId;
-    //缩略图
-    private String thumbnail;
-    //是否置顶（0否，1是）
-    private String isTop;
-    //状态（0已发布，1草稿）
+    //分类名
+    private String name;
+    //父分类id，如果没有父分类为-1
+    private Long pid;
+    //描述
+    private String description;
+    //状态0:正常,1禁用
     private String status;
-    //访问量
-    private Long viewCount;
-    //是否允许评论 1是，0否
-    private String isComment;
     
     private Long createBy;
     

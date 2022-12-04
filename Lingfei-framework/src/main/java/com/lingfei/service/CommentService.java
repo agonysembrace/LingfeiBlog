@@ -1,6 +1,7 @@
 package com.lingfei.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.lingfei.domain.ResponseResult;
 import com.lingfei.domain.entity.Comment;
 
 
@@ -12,5 +13,8 @@ import com.lingfei.domain.entity.Comment;
  */
 public interface CommentService extends IService<Comment> {
 
+    ResponseResult commentList(String commentType, Long articleId, Integer pageNum, Integer pageSize);
+
+    ResponseResult addComment(Comment comment);
 }
 

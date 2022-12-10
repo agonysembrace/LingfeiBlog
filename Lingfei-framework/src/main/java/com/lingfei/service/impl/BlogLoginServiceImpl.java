@@ -57,6 +57,7 @@ import com.lingfei.domain.entity.LoginUser;
 import com.lingfei.domain.entity.User;
 import com.lingfei.domain.vo.BlogUserLoginVo;
 
+import com.lingfei.domain.vo.userInfo;
 import com.lingfei.service.BlogLoginService;
 import com.lingfei.utils.BeanCopyUtils;
 import com.lingfei.utils.JwtUtil;
@@ -103,7 +104,8 @@ public class BlogLoginServiceImpl implements BlogLoginService {
 
         //把token和userinfo封装 返回
         //把User转换成UserInfoVo
-        UserInfoVo userInfoVo = BeanCopyUtils.copyBean(loginUser.getUser(), UserInfoVo.class);
+//        UserInfoVo userInfoVo = BeanCopyUtils.copyBean(loginUser.getUser(), UserInfoVo.class);
+        userInfo userInfoVo = BeanCopyUtils.copyBean(loginUser.getUser(), userInfo.class);
         BlogUserLoginVo vo = new BlogUserLoginVo(jwt,userInfoVo);
         return ResponseResult.okResult(vo);
     }

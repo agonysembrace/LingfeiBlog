@@ -5,7 +5,8 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.lingfei.domain.ResponseResult;
 import com.lingfei.domain.entity.User;
-import com.lingfei.domain.vo.UserInfoVo;
+
+import com.lingfei.domain.vo.userInfo;
 import com.lingfei.enums.AppHttpCodeEnum;
 import com.lingfei.exception.SystemException;
 import com.lingfei.mapper.UserMapper;
@@ -35,8 +36,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         //根据用户id查询用户信息
         User user = getById(userId);
         //封装成UserInfoVo
-        UserInfoVo vo = BeanCopyUtils.copyBean(user, UserInfoVo.class);
+//        UserInfoVo vo = BeanCopyUtils.copyBean(user, UserInfoVo.class);
+        userInfo vo = BeanCopyUtils.copyBean(user, userInfo.class);
         return ResponseResult.okResult(vo);
+
 
     }
 

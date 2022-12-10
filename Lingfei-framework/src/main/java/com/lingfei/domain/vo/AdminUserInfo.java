@@ -22,5 +22,7 @@ import java.util.List;
 public class AdminUserInfo {
      private List<String> permissions;
      private List<String> roles;
-     private UserInfoVo user;
+//     private UserInfoVo user;
+     private userInfo user;
 }
+

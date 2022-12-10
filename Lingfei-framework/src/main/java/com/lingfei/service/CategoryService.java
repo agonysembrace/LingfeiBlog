@@ -3,6 +3,10 @@ package com.lingfei.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.lingfei.domain.ResponseResult;
 import com.lingfei.domain.entity.Category;
+import com.lingfei.domain.vo.CategoryVo;
+import com.lingfei.domain.vo.PageVo;
+
+import java.util.List;
 
 
 /**
@@ -13,5 +17,9 @@ import com.lingfei.domain.entity.Category;
  */
 public interface CategoryService extends IService<Category> {
     ResponseResult getCategoryList();
+
+    PageVo selectCategoryPage(Category category, Integer pageNum, Integer pageSize);
+
+    List<CategoryVo> listAllCategory();
 }
 

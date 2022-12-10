@@ -47,9 +47,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //指定该api需要认证校验！
                 .antMatchers("/logout").authenticated()
                 //除上面外的所有请求不需认证即可访问！
-//                .anyRequest().permitAll();
+               .anyRequest().permitAll();
                 // 除上面外的所有请求全部需要鉴权认证
-                .anyRequest().authenticated();
+        //               .anyRequest().authenticated();
 
         //允许跨域
         http.cors();

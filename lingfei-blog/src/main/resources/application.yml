@@ -15,7 +15,7 @@ spring:
   #  文件上传的大小限制：multipart类型
   servlet:
     multipart:
-      max-file-size: 2MB
+      max-file-size: 5MB
       max-request-size: 5MB
 
 mybatis-plus:
@@ -33,7 +33,7 @@ mybatis-plus:
       table-prefix: sg_
 
 oss:
-  accessKey: DzwofQVACHviZl7CRk9KSIcSBlIm0Y7alBs42iuT
-  secretKey: Q90p3rJZ1mPl27D0KNW62EcwN7hfOrCLtuiEc6tF
-  bucket: sg-colablog
+  accessKey: r67rdcY1gHdFKG8FP0UirB0-FHOobwKRrd3sXLP6
+  secretKey: IX_HFgPTCjx8rJMsVxE3EASp6nTGZRx_lU_kwsdI
+  bucket: lingfei-blog
   domainName: http://rk54obks4.hn-bkt.clouddn.com/

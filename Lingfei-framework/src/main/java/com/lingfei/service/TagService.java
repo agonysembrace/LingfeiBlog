@@ -1,7 +1,10 @@
 package com.lingfei.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.lingfei.domain.ResponseResult;
 import com.lingfei.domain.entity.Tag;
+import com.lingfei.domain.vo.PageVo;
+import com.lingfei.dto.TagListDto;
 
 
 /**
@@ -12,5 +15,8 @@ import com.lingfei.domain.entity.Tag;
  */
 public interface TagService extends IService<Tag> {
 
+    ResponseResult<PageVo> pageTagList(Integer pageNum, Integer pageSize, TagListDto tagListDto);
+
+    ResponseResult addTag(TagListDto tagListDto);
 }
 

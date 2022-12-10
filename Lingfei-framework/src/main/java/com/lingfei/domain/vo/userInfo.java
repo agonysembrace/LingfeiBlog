@@ -6,7 +6,7 @@ import lombok.experimental.Accessors;
 @Data
 //生成setter方法返回this（也就是返回的是对象），代替了默认的返回void。
 @Accessors(chain = true)
-public class UserInfoVo {
+public class userInfo {
     /**
      * 主键
      */

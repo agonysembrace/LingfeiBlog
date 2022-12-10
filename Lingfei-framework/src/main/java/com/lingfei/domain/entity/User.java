@@ -3,6 +3,8 @@ package com.lingfei.domain.entity;
 import java.util.Date;
 
 import java.io.Serializable;
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,6 +24,8 @@ import com.baomidou.mybatisplus.annotation.TableName;
 public class User implements Serializable {
     //主键@TableId
     private Long id;
+
+
 
     //用户名
     private String userName;

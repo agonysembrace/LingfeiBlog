@@ -7,6 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -15,7 +16,8 @@ public class LoginUser implements UserDetails {//实现UserDetails接口
 
     //导入自己创建的pojo
     private User user;
-
+    //为loginUser添加所具有的权限信息属性
+    private List<String> permissions;
 
     //返回权限信息
     @Override

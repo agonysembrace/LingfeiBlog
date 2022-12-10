@@ -2,6 +2,7 @@ package com.lingfei.utils;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
@@ -16,6 +17,9 @@ public final class RedisUtil {
     //跟配置类一起合体使用的，所以缺一不可呀！
     @Autowired
     private RedisTemplate redisTemplate;
+
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
 
     // =============================common============================
     /**
@@ -43,8 +47,6 @@ public final class RedisUtil {
     public long getExpire(String key) {
         return redisTemplate.getExpire(key, TimeUnit.SECONDS);
     }
-
-
     /**
      * 判断key是否存在
      * @param key 键

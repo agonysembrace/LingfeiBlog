@@ -56,7 +56,7 @@ import com.lingfei.domain.ResponseResult;
 import com.lingfei.domain.entity.LoginUser;
 import com.lingfei.domain.entity.User;
 import com.lingfei.domain.vo.BlogUserLoginVo;
-import com.lingfei.domain.vo.UserInfoVo;
+
 import com.lingfei.service.BlogLoginService;
 import com.lingfei.utils.BeanCopyUtils;
 import com.lingfei.utils.JwtUtil;

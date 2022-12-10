@@ -1,10 +1,7 @@
 package com.lingfei.utils;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.BoundSetOperations;
-import org.springframework.data.redis.core.HashOperations;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
+import org.springframework.data.redis.core.*;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
@@ -16,6 +13,9 @@ public class RedisCache
 {
     @Autowired
     public RedisTemplate redisTemplate;
+
+//    @Autowired
+//    public StringRedisTemplate redisTemplate;
 
     /**
      * 缓存基本的对象，Integer、String、实体类等
@@ -202,7 +202,7 @@ public class RedisCache
     }
 
 
-    public void incrementCacheMapValue(String key,String hKey,int v){
+    public void incrementCacheMapValue(String key,String hKey,double v){
         redisTemplate.opsForHash().increment(key,hKey,v);
     }
 
